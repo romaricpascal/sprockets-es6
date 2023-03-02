@@ -7,7 +7,11 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application" %>
-    <%= javascript_include_tag "application" %>
+    <%# 
+      Because `application` now has some ES module instructions concatenated in,
+      it needs to be loaded with `type="module"` on the script tag
+    %>
+    <%= javascript_include_tag "application", type: :module %>
     <script src="/module.mjs" type="module"></script>
   </head>
 
