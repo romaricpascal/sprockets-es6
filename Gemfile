@@ -49,3 +49,5 @@ group :development do
   # gem "spring"
 end
 
+
+gem "sassc-rails", "~> 2.1"
